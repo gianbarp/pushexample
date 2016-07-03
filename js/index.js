@@ -38,7 +38,7 @@ var app = {
         app.setupPush();
     },
     setupPush: function() {
-        alert(PushNotification);
+        
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
@@ -52,7 +52,7 @@ var app = {
             "windows": {}
         });
         console.log('after init');
-
+        alert(push);
         push.on('registration', function(data) {
             console.log('registration event: ' + data.registrationId);
 
